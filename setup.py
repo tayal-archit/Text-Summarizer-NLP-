@@ -1,4 +1,5 @@
 import setuptools
+from typing import List
 
 with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
@@ -7,7 +8,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "Text-Summarizer-NLP-"
 AUTHOR_USER_NAME = "tayal-archit"
-SRC_REPO = "Text-Summarizer"
+SRC_REPO = "TextSummarizer"
 AUTHOR_EMAIL = "atayalwork@gmail.com"
 
 HYPHEN_E_DOT = '-e .'
@@ -36,6 +37,6 @@ setuptools.setup(
         "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
     },
     package_dir={"": "src"},
-    packages=setuptools.find_packages(where="src")
+    packages=setuptools.find_packages(where="src"),
     install_requires = get_requirements("requirements.txt")
 )
